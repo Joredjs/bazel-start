@@ -6,5 +6,7 @@ npm.npm_translate_lock(
     name = "npm",
     pnpm_lock = "//:pnpm-lock.yaml",
 )
-
 use_repo(npm, "npm")
+
+load("@npm//:defs.bzl", "npm_link_all_packages")
+npm_link_all_packages()
